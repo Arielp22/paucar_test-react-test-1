@@ -1,35 +1,61 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+/*import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-function App() {
-  const [count, setCount] = useState(0)
+import RBNavbar from "./components/RBNavbar";
+import RBFooter from "./components/RBFooter";
+import HomeRB from "./pages/Home";
+import Registro from "./pages/Registro";
+import Sueldo from "./pages/Sueldo";
+import Usuarios from "./pages/Usuarios";
+import Bono from "./pages/Bono";
 
+
+export default function App() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <BrowserRouter>
+      <RBNavbar />
 
-export default App
+      <Routes>
+        <Route path="/" element={<HomeRB />} />
+        <Route path="/registro" element={<Registro />} />
+        <Route path="/sueldo" element={<Sueldo />} />
+        <Route path="/usuarios" element={<Usuarios />} />
+        <Route path="/bono" element={<Bono />} />
+      </Routes>
+
+      <RBFooter />
+    </BrowserRouter>
+  );
+}
+  */
+
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import RBNavbar from "./components/RBNavbar";
+import RBFooter from "./components/RBFooter";
+import HomeRB from "./pages/Home";
+import AboutRB from "./pages/AboutRB";
+import Bono from "./pages/Bono";
+import Registro from "./pages/Registro";
+import Usuarios from "./pages/Usuarios";
+import Sueldo from "./pages/Sueldo";
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <RBNavbar />
+
+      <Routes>
+        <Route path="/" element={<HomeRB />} />
+        <Route path="/bono" element={<Bono />} />
+        <Route path="/registro" element={<Registro />} />
+        <Route path="/usuarios" element={<Usuarios />} />
+        <Route path="/sueldo" element={<Sueldo />} />
+
+      </Routes>
+
+      <RBFooter />
+    </BrowserRouter>
+  );
+}
